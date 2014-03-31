@@ -60,10 +60,10 @@ puts "Created formats"
 
 # puts "Created statuses"
 
-Story.create(:nickname => 'Morocco jewelry', :date => '2014-03-28', :time => '02:09:16', :notes => "No photos yet", :editor => editor1, :writer => writer1, :producer => producer1, :theme => theme1, :format => format1, :status => "*Unassigned")
-Story.create(:nickname => 'London skyscrapers', :date => '2014-03-30', :time => '04:00:00', :notes => "Needs a rewrite", :editor => editor2, :writer => writer2, :producer => producer2, :theme => theme2, :format => format2, :status => "Assigned")
-Story.create(:nickname => 'Buddhist monks', :date => '2014-04-04', :time => '06:09:16', :notes => "Please build in /features", :editor => editor3, :writer => writer3, :producer => producer3, :theme => theme3, :format => format3, :status => "Edited")
-Story.create(:nickname => 'Top 100 Hotels', :date => '2014-04-10', :time => '12:00:00', :notes => "Crop photos first", :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Produced")
+Story.create(:nickname => 'Morocco jewelry', :start_time => '2014-03-28 22:00:00', :notes => "No photos yet", :editor => editor1, :writer => writer1, :producer => producer1, :theme => theme1, :format => format1, :status => "*Unassigned")
+Story.create(:nickname => 'London skyscrapers', :start_time => '2014-03-29 16:00:00', :notes => "Needs a rewrite", :editor => editor2, :writer => writer2, :producer => producer2, :theme => theme2, :format => format2, :status => "Assigned")
+Story.create(:nickname => 'Buddhist monks', :start_time => '2014-04-01 02:00:00', :notes => "Please build in /features", :editor => editor3, :writer => writer3, :producer => producer3, :theme => theme3, :format => format3, :status => "Edited")
+Story.create(:nickname => 'Top 100 Hotels', :start_time => '2014-04-05 12:00:00', :notes => "Crop photos first", :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Produced")
 
 
 puts "Created stories"

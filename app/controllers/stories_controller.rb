@@ -10,6 +10,10 @@ class StoriesController < ApplicationController
     @stories = Story.order(order)
   end
 
+  def calendar
+    @stories = Story.all
+  end
+
   # GET /stories/1
   # GET /stories/1.json
   def show
@@ -72,7 +76,7 @@ class StoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def story_params
-      params.require(:story).permit(:nickname, :date, :time, :notes, :writer_id, :editor_id, :producer_id, :theme_id, :format_id, :status)
+      params.require(:story).permit(:nickname, :start_time, :notes, :writer_id, :editor_id, :producer_id, :theme_id, :format_id, :status)
     end
 
     def load_users

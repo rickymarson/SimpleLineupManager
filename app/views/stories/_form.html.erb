@@ -16,12 +16,8 @@
     <%= f.text_field :nickname %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :time %><br>
-    <%= f.time_select :time %>
+    <%= f.label :scheduled_date %><br>
+    <%= f.datetime_select :start_time %>
   </div>
   <div class="field">
     <%= f.label :notes %><br>

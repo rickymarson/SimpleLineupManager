@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140331194634) do
+ActiveRecord::Schema.define(version: 20140331201839) do
 
   create_table "editors", force: true do |t|
     t.string   "username"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140331194634) do
     t.integer  "theme_id"
     t.integer  "format_id"
     t.string   "status"
+    t.datetime "start_time"
   end
 
   add_index "stories", ["editor_id"], name: "index_stories_on_editor_id"

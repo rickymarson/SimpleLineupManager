@@ -4,8 +4,7 @@
   <thead>
     <tr>
       <th><%= sortable_column "Nickname" %></th>
-      <th><%= sortable_column "Date" %></th>
-      <th>Time</th>
+      <th><%= sortable_column "Scheduled Date", :column => "start_time" %></th>
       <th>Notes</th>
 
       <th>Writer</th>
@@ -14,7 +13,7 @@
 
       <th>Theme</th>
       <th>Format</th>
-      <th><%= sortable_column "Status", :column => "status"  %></th>
+      <th><%= sortable_column "Status", :column => "status" %></th>
 
       <th></th>
       <th></th>
@@ -27,10 +26,8 @@
 
       <tr>
         <td><%= story.nickname %></td>
-        <td><%= story.date.to_formatted_s(:short) %></td>
-        <td><%= story.time.to_formatted_s(:time)  %></td>
+        <td><%= story.start_time %></td>
         <td><%= story.notes %></td>
-
         <td><%= story.writer.username %></td>
         <td><%= story.editor.username %></td>
         <td><%= story.producer.username %></td>
@@ -43,8 +40,15 @@
       </tr>
     <% end %>
   </tbody>
+
 </table>
 
 <br>
 
 <%= link_to 'New Story', new_story_path %>
+
+
+<%= calendar @stories, {:prev_text=>"prev", :next_text=>"next"} do |story| %>
+  <div><%= link_to story.nickname, story %></div>
+  <div><%= story.status %></div>
+<% end %>
