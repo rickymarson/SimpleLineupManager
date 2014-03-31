@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140331053403) do
+ActiveRecord::Schema.define(version: 20140331194634) do
 
   create_table "editors", force: true do |t|
     t.string   "username"
@@ -50,14 +50,13 @@ ActiveRecord::Schema.define(version: 20140331053403) do
     t.integer  "writer_id"
     t.integer  "editor_id"
     t.integer  "theme_id"
-    t.integer  "status_id"
     t.integer  "format_id"
+    t.string   "status"
   end
 
   add_index "stories", ["editor_id"], name: "index_stories_on_editor_id"
   add_index "stories", ["format_id"], name: "index_stories_on_format_id"
   add_index "stories", ["producer_id"], name: "index_stories_on_producer_id"
-  add_index "stories", ["status_id"], name: "index_stories_on_status_id"
   add_index "stories", ["theme_id"], name: "index_stories_on_theme_id"
   add_index "stories", ["writer_id"], name: "index_stories_on_writer_id"
 

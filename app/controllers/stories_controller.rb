@@ -3,7 +3,6 @@ class StoriesController < ApplicationController
   before_action :load_users, only: [:new, :edit]
   before_action :load_themes, only: [:new, :edit]
   before_action :load_formats, only: [:new, :edit] 
-  before_action :load_statuses, only: [:new, :edit]   
   # GET /stories
   # GET /stories.json
   def index
@@ -73,7 +72,7 @@ class StoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def story_params
-      params.require(:story).permit(:nickname, :date, :time, :notes, :writer_id, :editor_id, :producer_id, :theme_id, :format_id, :status_id)
+      params.require(:story).permit(:nickname, :date, :time, :notes, :writer_id, :editor_id, :producer_id, :theme_id, :format_id, :status)
     end
 
     def load_users
@@ -90,8 +89,6 @@ class StoriesController < ApplicationController
       @formats = Format.order(:format).collect {|format| [ format.format, format.id] }
     end
 
-    def load_statuses
-      @statuses = Status.all.collect {|status| [ status.status, status.id] }
-    end
+
 
 end
