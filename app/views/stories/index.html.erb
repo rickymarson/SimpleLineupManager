@@ -1,0 +1,50 @@
+<h1>Listing stories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= sortable_column "Nickname" %></th>
+      <th><%= sortable_column "Date" %></th>
+      <th>Time</th>
+      <th>Notes</th>
+
+      <th><%= sortable_column "Writer", :column => "writer_name" %></th>
+      <th><%= sortable_column "Editor", :column => "editor_id"  %></th>
+      <th><%= sortable_column "Producer", :column => "producer_id"  %></th>
+
+      <th><%= sortable_column "Theme", :column => "theme_id"  %></th>
+      <th><%= sortable_column "Format", :column => "format_id"  %></th>
+      <th><%= sortable_column "Status", :column => "status_id"  %></th>
+
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stories.each do |story| %>
+  
+      <tr>
+        <td><%= story.nickname %></td>
+        <td><%= story.date.to_formatted_s(:short) %></td>
+        <td><%= story.time.to_formatted_s(:time)  %></td>
+        <td><%= story.notes %></td>
+
+        <td><%= story.writer.username %></td>
+        <td><%= story.editor.username %></td>
+        <td><%= story.producer.username %></td>
+        <td><%= story.theme.theme %></td>
+        <td><%= story.format.format %></td>
+        <td><%= story.status.status %></td>
+        <td><%= link_to 'Show', story %></td>
+        <td><%= link_to 'Edit', edit_story_path(story) %></td>
+        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Story', new_story_path %>

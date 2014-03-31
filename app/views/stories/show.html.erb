@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @story.nickname %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @story.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @story.time %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @story.notes %>
+</p>
+
+<p>
+  <strong>Writer:</strong>
+  <%= @story.writer.username %>
+</p>
+
+<p>
+  <strong>Editor:</strong>
+  <%= @story.editor.username %>
+</p>
+
+<p>
+  <strong>Producer:</strong>
+  <%= @story.producer.username %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @story.theme.theme %>
+</p>
+
+<p>
+  <strong>Format:</strong>
+  <%= @story.format.format %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @story.status.status %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>

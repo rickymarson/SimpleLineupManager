@@ -1,0 +1,64 @@
+<%= form_for(@story) do |f| %>
+  <% if @story.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+      <ul>
+      <% @story.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nickname %><br>
+    <%= f.text_field :nickname %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.time_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :writer %><br>
+    <%= f.select :writer_id, @writers %>
+  </div>
+
+  <div class="field">
+    <%= f.label :editor %><br>
+    <%= f.select :editor_id, @editors %>
+  </div>
+
+  <div class="field">
+    <%= f.label :producer %><br>
+    <%= f.select :producer_id, @producers %>
+  </div>  
+
+  <div class="field">
+    <%= f.label :theme %><br>
+    <%= f.select :theme_id, @themes %>
+  </div>  
+
+  <div class="field">
+    <%= f.label :format %><br>
+    <%= f.select :format_id, @formats %>
+  </div>  
+
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.select :status_id, @statuses %>
+  </div>  
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
