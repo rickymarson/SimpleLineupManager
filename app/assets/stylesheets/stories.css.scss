@@ -4,3 +4,41 @@
   .calendar td { height: 100px; width: 14.28%; }
 
 body { padding-top: 60px; }
+
+$red: #FF3300;
+$orange: #FF6600;
+$pink: #FF0077;
+$purple: #660088;
+$blue: #0033DD;
+$green: #33CC00;
+$black: #000;
+$white: #FFF;
+$dark-gray: #666;
+$alpha: 0.5;
+
+
+#calendar a {color: $black}
+
+#calendar a:hover {color: $red; background-color: transparent;}
+
+.datetime { color: $dark-gray }
+
+.unassigned {background-color: rgba($red, $alpha)}
+.assigned {background-color: rgba($orange, $alpha)}
+.received {background-color: rgba($pink, $alpha)}
+.edited {background-color: rgba($purple, $alpha)}
+.produced {background-color: rgba($blue, $alpha)}
+.scheduled {background-color: rgba($green, $alpha)}
+.published {background-color: rgba($dark-gray, $alpha); text-decoration:line-through; }
+
+.calendar-item {
+  min-height: 20px;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.calendar-item h5 {margin: 0}
+.calendar-item p {margin: 0 0 0px}
+
