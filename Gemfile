@@ -36,10 +36,11 @@ gem 'handles_sortable_columns', '~> 0.1.4'
 
 gem "simple_calendar", "~> 0.1.10"
 
+gem 'less-rails'
+gem "therubyracer"
 gem "twitter-bootstrap-rails"
 
 
-# gem 'column_sort', '~> 0.0.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
