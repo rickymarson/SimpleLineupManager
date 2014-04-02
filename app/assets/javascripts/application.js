@@ -15,5 +15,6 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+//= require twitter/bootstrap
+//= require colorbox-rails
 
-= require twitter/bootstrap

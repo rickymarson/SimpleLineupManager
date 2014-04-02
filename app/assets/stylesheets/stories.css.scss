@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
   .calendar td { height: 100px; width: 14.28%; }
 
-body { padding-top: 60px; }
+body { padding-top: 60px; background-color: #FFF;}
+.container {background-color: #FFF;}
 
 $red: #FF0000;
 $orange: #FF6600;
@@ -46,3 +47,5 @@ $pink: #FF0077;
 .calendar-item p {margin: 0 0 0px}
 
 #sidebar {margin-top: 60px;}
+
+

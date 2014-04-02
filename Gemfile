@@ -39,7 +39,7 @@ gem "simple_calendar", "~> 0.1.10"
 gem 'less-rails'
 gem "therubyracer"
 gem "twitter-bootstrap-rails"
-
+gem 'colorbox-rails', '~> 0.1.1'
 
 
 # Use ActiveModel has_secure_password
