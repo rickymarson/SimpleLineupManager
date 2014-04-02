@@ -5,29 +5,32 @@
 
 body { padding-top: 60px; }
 
-$red: #FF3300;
+$red: #FF0000;
 $orange: #FF6600;
-$pink: #FF0077;
-$purple: #660088;
-$blue: #0033DD;
-$green: #33CC00;
+$yellow: #FFDD00;
+$green: #00DD33;
+$blue: #0088EE;
+$purple: #993388;
 $black: #000;
 $white: #FFF;
 $dark-gray: #666;
 $alpha: 0.5;
+
+$pink: #FF0077;
 
 
 #calendar a {color: $black}
 
 #calendar a:hover {color: $red; background-color: transparent;}
 
-.datetime { color: $dark-gray }
+.datetime { display: block; color: $dark-gray; float: left; padding-right: 4px;}
+.status { font-size: 10px; line-height: 18px; }
 
-.unassigned {background-color: rgba($red, $alpha)}
-.assigned {background-color: rgba($orange, $alpha)}
-.received {background-color: rgba($pink, $alpha)}
-.edited {background-color: rgba($purple, $alpha)}
-.produced {background-color: rgba($blue, $alpha)}
+.unassigned {background-color: rgba($blue, $alpha)}
+.assigned {background-color: rgba($purple, $alpha)}
+.filed {background-color: rgba($red, $alpha)}
+.edited {background-color: rgba($orange, $alpha)}
+.produced {background-color: rgba($yellow, $alpha)}
 .scheduled {background-color: rgba($green, $alpha)}
 .published {background-color: rgba($dark-gray, $alpha); text-decoration:line-through; }
 
@@ -42,3 +45,4 @@ $alpha: 0.5;
 .calendar-item h5 {margin: 0}
 .calendar-item p {margin: 0 0 0px}
 
+#sidebar {margin-top: 60px;}

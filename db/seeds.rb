@@ -59,17 +59,31 @@ puts "Created formats"
 # status7 = Status.create(:status => "Published")
 
 # puts "Created statuses"
+Story.create(:nickname => 'Buddhist monks', :start_time => '2014-04-01 8:00:00', :notes => "Please build in /features", :editor => editor3, :writer => writer3, :producer => producer3, :theme => theme3, :format => format3, :status => "Published")
+Story.create(:nickname => 'April fools', :start_time => '2014-04-01 10:00:00', :notes => "Please build in /features", :editor => editor3, :writer => writer3, :producer => producer3, :theme => theme3, :format => format3, :status => "Published")
 
-Story.create(:nickname => 'Morocco jewelry', :start_time => '2014-04-28 22:00:00', :notes => "No photos yet", :editor => editor1, :writer => writer1, :producer => producer1, :theme => theme1, :format => format1, :status => " Unassigned")
-Story.create(:nickname => 'London skyscrapers', :start_time => '2014-04-29 16:00:00', :notes => "Needs a rewrite", :editor => editor2, :writer => writer2, :producer => producer2, :theme => theme2, :format => format2, :status => "Assigned")
-Story.create(:nickname => 'Buddhist monks', :start_time => '2014-04-01 02:00:00', :notes => "Please build in /features", :editor => editor3, :writer => writer3, :producer => producer3, :theme => theme3, :format => format3, :status => "Edited")
-Story.create(:nickname => 'Top 100 Hotels', :start_time => '2014-04-05 12:00:00', :notes => "Crop photos first", :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Produced")
-Story.create(:nickname => 'German beer', :start_time => '2014-04-03 18:00:00', :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Produced")
-Story.create(:nickname => 'Pools w/a View', :start_time => '2014-04-03 17:00:00', :notes => "Needs a rewrite", :editor => editor2, :writer => writer2, :producer => producer2, :theme => theme2, :format => format2, :status => "Scheduled")
+Story.create(:nickname => 'Champagne shower', :start_time => '2014-04-02 8:00:00', :notes => "none", :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Published")
+Story.create(:nickname => 'Top 100 Hotels', :start_time => '2014-04-02 12:00:00', :notes => "none", :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Published")
 
+Story.create(:nickname => 'WP flying tips', :start_time => '2014-04-03 8:00:00', :notes => "Please source photo", :editor => editor1, :writer => writer1, :producer => producer1, :theme => theme1, :format => format1, :status => "Scheduled")
+Story.create(:nickname => 'Cuba book', :start_time => '2014-04-03 9:00:00', :notes => "Please source photo", :editor => editor1, :writer => writer1, :producer => producer1, :theme => theme1, :format => format1, :status => "Scheduled")
+Story.create(:nickname => 'Pools w/a View', :start_time => '2014-04-03 10:00:00', :notes => "Needs a rewrite", :editor => editor2, :writer => writer2, :producer => producer2, :theme => theme2, :format => format2, :status => "Produced")
+Story.create(:nickname => 'Editors Itinerary', :start_time => '2014-04-03 11:00:00', :notes => "Please source photo", :editor => editor1, :writer => writer1, :producer => producer1, :theme => theme1, :format => format1, :status => "Scheduled")
+Story.create(:nickname => 'German beer', :start_time => '2014-04-03 12:00:00', :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Edited")
+Story.create(:nickname => 'Best miles cards', :start_time => '2014-04-03 14:00:00', :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Produced")
+Story.create(:nickname => 'Cupcake ATM', :start_time => '2014-04-03 16:00:00', :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Filed")
+Story.create(:nickname => 'Restaurants in Weird Places', :start_time => '2014-04-03 18:00:00', :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Assigned")
 
+Story.create(:nickname => 'WP Five Things', :start_time => '2014-04-04 8:00:00', :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Produced")
+Story.create(:nickname => 'French museum cafe', :start_time => '2014-04-04 10:00:00', :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Filed")
+Story.create(:nickname => 'Augmented reality', :start_time => '2014-04-04 10:00:00', :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Edited")
 
-Story.create(:nickname => 'WP mileage tips', :start_time => '2014-04-03 12:00:00', :notes => "Please source photo", :editor => "Don Draper", :writer => writer1, :producer => producer1, :theme => theme1, :format => format1, :status => " Unassigned")
+Story.create(:nickname => 'SD Bacon & Beer', :start_time => '2014-04-05 10:00:00', :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => "Assigned")
+
+Story.create(:nickname => 'Tax Refund Vacation', :start_time => '2014-04-06 10:00:00', :editor => editor1, :writer => writer2, :producer => producer3, :theme => theme4, :format => format4, :status => " Unassigned")
+
+Story.create(:nickname => 'Morocco jewelry', :start_time => '2014-04-08 22:00:00', :notes => "No photos yet", :editor => editor1, :writer => writer1, :producer => producer1, :theme => theme1, :format => format1, :status => " Unassigned")
+Story.create(:nickname => 'London skyscrapers', :start_time => '2014-04-11 16:00:00', :notes => "Needs a rewrite", :editor => editor2, :writer => writer2, :producer => producer2, :theme => theme2, :format => format2, :status => "Assigned")
 
 
 puts "Created stories"
