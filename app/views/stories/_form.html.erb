@@ -1,8 +1,7 @@
-
+<% 'stories_edit' %>
 
 <div class="container">
   <div class="row">
-    <div class="span9">
       <div class="well">
 
         <%= form_for(@story) do |f| %>
@@ -18,33 +17,45 @@
             </div>
           <% end %>
 
-          <div class="field">
-            <%= f.label :nickname %><br>
-            <%= f.text_field :nickname %>
-          </div>
-          <div class="field">
-            <%= f.label :scheduled_date %><br>
-            <%= f.datetime_select :start_time, ampm: true, :minute_step => 30 %>
-          </div>
-
-          <div class="field">
-            <%= f.label :notes %><br>
-            <%= f.text_area :notes, cols: 20, rows: 5 %>
-          </div>
-
+ 
 
           <div class="btn-group">  
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">            <%= f.label :writer %><br>
+
+          <button type="button" class="btn btn-default">          
+            <%= f.label :nickname %>
+            <%= f.text_field :nickname %>
+          </button>
+
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">          
+            <%= f.label :status %>
+            <%= f.select :status, [[' Unassigned', " Unassigned"],['Assigned','Assigned'],['Filed','Filed'], ['Edited','Edited'], ['Produced','Produced'], ['Scheduled','Scheduled'], ['Published','Published']]  %>
+          </button>  
+        </div>
+
+<br>
+<br>
+
+          <div class="btn-group">  
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+            <%= f.label :scheduled_date %>
+            <%= f.datetime_select :start_time, order: [:month, :day, :year], ampm: true, :minute_step => 15 %>
+            </button>
+          </div>
+
+<br>
+<br>
+          <div class="btn-group">  
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">            <%= f.label :writer %>
               <%= f.select :writer_id, @writers %>
             </button>
 
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
-              <%= f.label :editor %><br>
+              <%= f.label :editor %>
               <%= f.select :editor_id, @editors %>
             </button>
 
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              <%= f.label :producer %><br>
+              <%= f.label :producer %>
               <%= f.select :producer_id, @producers %>
             </button>  
           </div>
@@ -53,36 +64,28 @@
 
           <div class="btn-group">  
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            <%= f.label :theme %><br>
+            <%= f.label :theme %>
             <%= f.select :theme_id, @themes %>
           </button>  
 
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            <%= f.label :format %><br>
+            <%= f.label :format %>
             <%= f.select :format_id, @formats %>
           </button> 
+
           </div> 
 
-<br>
-<br>
+          <br>
+          <br>
+          <div class="field">
+            <%= f.label :notes %>
+            <%= f.text_area :notes %>
+          </div>
 
-          <div class="btn-group">  
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">          
-            <%= f.label :status %><br>
-            <%= f.select :status, [[' Unassigned', " Unassigned"],['Assigned','Assigned'],['Filed','Filed'], ['Edited','Edited'], ['Produced','Produced'], ['Scheduled','Scheduled'], ['Published','Published']]  %>
-          </button>  
-
-<br>
-<br>
-<div class="btn-group">  
-          <button class="btn btn-default btn-lg" type="button">
-            <%= f.submit %>
-          </button>
-        </div>
-
+          <div>
+            <%= f.submit "Save Update", {:class => "btn btn-default btn-lg"}  %>
+          </div>
         <% end %>
-
       </div>
     </div>
   </div>
-</div>
