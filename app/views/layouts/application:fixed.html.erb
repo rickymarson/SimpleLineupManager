@@ -16,6 +16,7 @@
     <%= stylesheet_link_tag "shadowbox", :media => "all" %>
 
 
+
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
@@ -39,31 +40,18 @@
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "shadowbox" %>
     
-    <script type="text/javascript"> Shadowbox.init({onClose:function(){location.reload();}}); </script>
-
+    <script type="text/javascript"> 
+    Shadowbox.init({onClose:function(){location.reload();}}); 
+    </script>
   </head>
   <body>
-
-
-
-
-
-
-
     <div class="container">
         <div class="row">
           <div class="span12">
             <%= bootstrap_flash %>
             <%= yield %>
           </div>
- 
-
-
         </div><!--/row-->
-
-
-
     </div> <!-- /container -->
-
   </body>
 </html>

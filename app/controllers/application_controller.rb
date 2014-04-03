@@ -4,4 +4,5 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   handles_sortable_columns
   layout "application:fixed.html.erb"
+	
 end
