@@ -50,7 +50,7 @@ gem "simple_calendar", "~> 0.1.10"
 gem 'less-rails'
 gem "therubyracer"
 gem "twitter-bootstrap-rails"
-
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
