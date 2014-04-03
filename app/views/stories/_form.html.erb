@@ -1,60 +1,88 @@
-<%= form_for(@story) do |f| %>
-  <% if @story.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
 
-      <ul>
-      <% @story.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+
+<div class="container">
+  <div class="row">
+    <div class="span9">
+      <div class="well">
+
+        <%= form_for(@story) do |f| %>
+          <% if @story.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+              <ul>
+              <% @story.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= f.label :nickname %><br>
+            <%= f.text_field :nickname %>
+          </div>
+          <div class="field">
+            <%= f.label :scheduled_date %><br>
+            <%= f.datetime_select :start_time, ampm: true, :minute_step => 30 %>
+          </div>
+
+          <div class="field">
+            <%= f.label :notes %><br>
+            <%= f.text_area :notes, cols: 20, rows: 5 %>
+          </div>
+
+
+          <div class="btn-group">  
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">            <%= f.label :writer %><br>
+              <%= f.select :writer_id, @writers %>
+            </button>
+
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+              <%= f.label :editor %><br>
+              <%= f.select :editor_id, @editors %>
+            </button>
+
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <%= f.label :producer %><br>
+              <%= f.select :producer_id, @producers %>
+            </button>  
+          </div>
+<br>
+<br>
+
+          <div class="btn-group">  
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <%= f.label :theme %><br>
+            <%= f.select :theme_id, @themes %>
+          </button>  
+
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <%= f.label :format %><br>
+            <%= f.select :format_id, @formats %>
+          </button> 
+          </div> 
+
+<br>
+<br>
+
+          <div class="btn-group">  
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">          
+            <%= f.label :status %><br>
+            <%= f.select :status, [[' Unassigned', " Unassigned"],['Assigned','Assigned'],['Filed','Filed'], ['Edited','Edited'], ['Produced','Produced'], ['Scheduled','Scheduled'], ['Published','Published']]  %>
+          </button>  
+
+<br>
+<br>
+<div class="btn-group">  
+          <button class="btn btn-default btn-lg" type="button">
+            <%= f.submit %>
+          </button>
+        </div>
+
+        <% end %>
+
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :nickname %><br>
-    <%= f.text_field :nickname %>
   </div>
-  <div class="field">
-    <%= f.label :scheduled_date %><br>
-    <%= f.datetime_select :start_time %>
-  </div>
-  <div class="field">
-    <%= f.label :notes %><br>
-    <%= f.text_field :notes %>
-  </div>
-
-  <div class="field">
-    <%= f.label :writer %><br>
-    <%= f.select :writer_id, @writers %>
-  </div>
-
-  <div class="field">
-    <%= f.label :editor %><br>
-    <%= f.select :editor_id, @editors %>
-  </div>
-
-  <div class="field">
-    <%= f.label :producer %><br>
-    <%= f.select :producer_id, @producers %>
-  </div>  
-
-  <div class="field">
-    <%= f.label :theme %><br>
-    <%= f.select :theme_id, @themes %>
-  </div>  
-
-  <div class="field">
-    <%= f.label :format %><br>
-    <%= f.select :format_id, @formats %>
-  </div>  
-
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.select :status, [[' Unassigned', " Unassigned"],['Assigned','Assigned'],['Filed','Filed'], ['Edited','Edited'], ['Produced','Produced'], ['Scheduled','Scheduled'], ['Published','Published']]  %>
-  </div>  
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

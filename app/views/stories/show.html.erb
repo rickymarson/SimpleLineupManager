@@ -1,58 +1,65 @@
 
-<h1>Editing story</h1>
 
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      <div class="well">
 
-<p id="notice"><%= notice %></p>
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nickname:</strong>
-  <%= @story.nickname %>
-</p>
+      <h2>
+        <%= @story.nickname %>
+      </h2>
 
-<p>
-  <strong>Scheduled Date:</strong>
-  <%= @story.start_time %>
-</p>
+      <p>
+        <strong>Date:</strong>
+        <%= @story.start_time.strftime("%A, %B %d") %>
+      </p>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @story.notes %>
-</p>
+      <p>
+        <strong>Time:</strong>
+        <%= @story.start_time.strftime("%I:%M %p")  %>
+      </p>
 
-<p>
-  <strong>Writer:</strong>
-  <%= @story.writer.username %>
-</p>
+      <p>
+        <strong>Notes:</strong>
+        <%= @story.notes %>
+      </p>
 
-<p>
-  <strong>Editor:</strong>
-  <%= @story.editor.username %>
-</p>
+      <p>
+        <strong>Writer:</strong>
+        <%= @story.writer.username %>
+      </p>
 
-<p>
-  <strong>Producer:</strong>
-  <%= @story.producer.username %>
-</p>
+      <p>
+        <strong>Editor:</strong>
+        <%= @story.editor.username %>
+      </p>
 
-<p>
-  <strong>Theme:</strong>
-  <%= @story.theme.theme %>
-</p>
+      <p>
+        <strong>Producer:</strong>
+        <%= @story.producer.username %>
+      </p>
 
-<p>
-  <strong>Format:</strong>
-  <%= @story.format.format %>
-</p>
+      <p>
+        <strong>Theme:</strong>
+        <%= @story.theme.theme %>
+      </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @story.status %>
-</p>
+      <p>
+        <strong>Format:</strong>
+        <%= @story.format.format %>
+      </p>
 
+      <p>
+        <strong>Status:</strong>
+        <%= @story.status %>
+      </p>
 
-
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back to Calendar View', "/stories#calendar" %> |
-<%= link_to 'Back to List View', "/stories#list" %>
+      <h4><%= link_to 'Edit', edit_story_path(@story) %> </h4>
+      </div>
+    </div>
+  </div>
+</div>
 
 

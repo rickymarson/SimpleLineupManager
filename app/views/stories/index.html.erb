@@ -1,4 +1,6 @@
 
+<%= render "/layouts/nav" %>
+
       <ul class="nav nav-tabs">
         <li class="active" ><a href="#calendar" data-toggle="tab">Calendar</a></li>
         <li><a href="#list" data-toggle="tab">List</a></li>
@@ -12,10 +14,9 @@
 
         <article class="tab-pane active" id="calendar">
 
-
       <%= calendar @stories, {:prev_text=>"prev", :next_text=>"next"} do |story| %>
         <div class="calendar-item <%= story.status.downcase.lstrip%>" > 
-          <h5><%= link_to story.nickname, story, :data => { :colorbox => true, :colorbox_height => '400px', :colorbox_width => '500px', :colorbox_iframe => "false", :transition => "none", :colorbox_open => true } %></h5>
+          <h5><%= link_to story.nickname, story, { :rel => "shadowbox;height=400;width=600"} %></h5>
           <p class="datetime"><%= story.start_time.strftime("%I:%M %p") %></p>
           <p class="status"><%= story.status %></p>
         </div>
