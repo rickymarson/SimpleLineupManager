@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'ruby', '0.1.0'
 gem 'lazybox'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
