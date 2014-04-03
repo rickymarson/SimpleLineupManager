@@ -9,13 +9,13 @@
 
 <div class="container">
   <div class="row">
-    <div class="span10">
+    <div class="span12">
 
       <section class="tab-content">
 
         <article class="tab-pane active" id="calendar">
 
-      <%= calendar @stories, {:prev_text=>"prev", :next_text=>"next"} do |story| %>
+      <%= calendar @stories, {:prev_text=>"prev  ", :next_text=>"  next"} do |story| %>
         <div class="calendar-item <%= story.status.downcase.lstrip%>" > 
           <h5><%= link_to story.nickname, story, { :rel => "shadowbox;height=630;width=640"} %></h5>
           <p class="datetime"><%= story.start_time.strftime("%I:%M %p") %></p>
@@ -74,23 +74,7 @@
       </section>
     </div>
 
-    <div id="sidebar" class="span2">
-      <div class="well">
-        <h4>STATUS KEY</h5> 
-          <br>
-        <h5>Writers</h5>
-          <div class="calendar-item assigned" >Write me!</div>
-          <br>
-        <h5>Editors</h5>
-          <div class="calendar-item unassigned" >Assign me!</div>
-          <div class="calendar-item filed" >Edit me!</div>
-          <div class="calendar-item produced" >Schedule me!</div>
-          <br>
-        <h5>Producers</h5>
-          <div class="calendar-item edited" >Produce me!</div>
-          <div class="calendar-item scheduled" >QA me!</div>
-      </div><!--/.well -->
-    </div><!--/span-->
+    
 
   </div>
 

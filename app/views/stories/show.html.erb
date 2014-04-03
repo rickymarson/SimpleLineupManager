@@ -11,6 +11,11 @@
       </h2>
 
       <p>
+        <strong>Status:</strong>
+        <%= @story.status %>
+      </p>
+
+      <p>
         <strong>Date:</strong>
         <%= @story.start_time.strftime("%A, %B %d") %>
       </p>
@@ -18,11 +23,6 @@
       <p>
         <strong>Time:</strong>
         <%= @story.start_time.strftime("%I:%M %p")  %>
-      </p>
-
-      <p>
-        <strong>Notes:</strong>
-        <%= @story.notes %>
       </p>
 
       <p>
@@ -51,11 +51,16 @@
       </p>
 
       <p>
-        <strong>Status:</strong>
-        <%= @story.status %>
+        <strong>Notes:</strong>
+        <%= @story.notes %>
       </p>
 
-      <h4><%= link_to 'Edit', edit_story_path(@story) %> </h4>
+        <div>
+            <%= link_to "Edit", edit_story_path(@story), {:class => "btn btn-default btn-lg"}  %> | 
+            <%= link_to "Close", stories_path(@story), {:class => "btn btn-default btn-lg", :target => "_parent"}  %>
+        </div>
+
+
       </div>
     </div>
   </div>
