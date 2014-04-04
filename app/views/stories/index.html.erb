@@ -25,52 +25,6 @@
 
         </article>
 
-        <article class="tab-pane" id="list">
-          <div class="panel panel-default">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th><%= sortable_column "Nickname" %></th>
-                  <th><%= sortable_column "Scheduled Date", :column => "start_time" %></th>
-                  <th>Notes</th>
-
-                  <th>Writer</th>
-                  <th>Editor</th>
-                  <th>Producer</th>
-
-                  <th>Theme</th>
-                  <th>Format</th>
-                  <th><%= sortable_column "Status", :column => "status" %></th>
-
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <% @stories.each do |story| %>
-
-                  <tr>
-                    <td><%= story.nickname %></td>
-                    <td><%= story.start_time %></td>
-                    <td><%= story.notes %></td>
-                    <td><%= story.writer.username %></td>
-                    <td><%= story.editor.username %></td>
-                    <td><%= story.producer.username %></td>
-                    <td><%= story.theme.theme %></td>
-                    <td><%= story.format.format %></td>
-                    <td class="<%= story.status.downcase.lstrip%>" ><%= story.status %></td>
-                    <td><%= link_to 'Show', story %></td>
-                    <td><%= link_to 'Edit', edit_story_path(story) %></td>
-                    <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
-            <div class="panel-footer"><%= link_to 'New Story', new_story_path %></div>
-          </div>
-        </article>
       </section>
     </div>
 
