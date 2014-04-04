@@ -1,21 +1,13 @@
 SimpleLineupManager::Application.routes.draw do
   resources :formats
-
   resources :statuses
-
   resources :themes
-
   resources :writers
-
   resources :editors
-
   resources :producers
-
   resources :stories
 
   root 'stories#index'
-
-  get "calendar" => "calendar#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
