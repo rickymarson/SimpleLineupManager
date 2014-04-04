@@ -1,4 +1,5 @@
 SimpleLineupManager::Application.routes.draw do
+  get "welcome/index"
   resources :formats
   resources :statuses
   resources :themes

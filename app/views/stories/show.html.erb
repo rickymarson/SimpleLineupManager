@@ -1,11 +1,7 @@
-
-<% 'stories_show' %>
-
 <div class="container">
   <div class="row">
     <div class="span6">
       <div class="well">
-
       <h2>
         <%= @story.nickname %>
       </h2>
@@ -59,8 +55,6 @@
             <%= link_to "Edit", edit_story_path(@story), {:class => "btn btn-default btn-lg"}  %> | 
             <%= link_to "Close", stories_path(@story), {:class => "btn btn-default btn-lg", :target => "_parent"}  %>
         </div>
-
-
       </div>
     </div>
   </div>
